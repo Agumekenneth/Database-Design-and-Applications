@@ -57,3 +57,6 @@ UPDATE customer SET Age=19 WHERE CustomerID=1;
 UPDATE customer SET Age= 21 WHERE CustomerID=2;
 UPDATE customer SET Age= 20 WHERE CustomerID=3;
 UPDATE customer SET Age= 22 WHERE CustomerID=4;
+--Changing a column name
+ALTER TABLE customer CHANGE Age  Ages INT(11);
+ALTER TABLE customer CHANGE telephonenumber Contacts INT(10)
