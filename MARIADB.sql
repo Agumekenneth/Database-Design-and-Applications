@@ -58,5 +58,17 @@ UPDATE customer SET Age= 21 WHERE CustomerID=2;
 UPDATE customer SET Age= 20 WHERE CustomerID=3;
 UPDATE customer SET Age= 22 WHERE CustomerID=4;
 --Changing a column name
-ALTER TABLE customer CHANGE Age  Ages INT(11);
-ALTER TABLE customer CHANGE telephonenumber Contacts INT(10)
+ALTER TABLE customer CHANGE telephonenumber Contacts INT(10);
+
+-- Inserting a row
+INSERT INTO product(pdtID,productname,price,stockQty) 
+VALUES(5,'water_bottle',1200,12);
+
+UPDATE product SET price=1400 WHERE PdtID=5;
+
+ALTER TABLE product ADD COLUMN payment_mode VARCHAR(20);
+UPDATE product SET payment_mode='not null' WHERE pdtID=5;
+--Deleting a value within a table
+DELETE FROM customer WHERE CustomerID=4;
+
+ALTER TABLE product CHANGE stockQTy Qty_purchased VARCHAR(20);
