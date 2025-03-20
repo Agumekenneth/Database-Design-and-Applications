@@ -54,3 +54,19 @@ INSERT INTO market(marketID,marketName,location) VALUES(201,'kibinge market','ki
 INSERT INTO market(marketID,marketName,location) VALUES(202,'masaka central market','masaka');
 INSERT INTO market(marketID,marketName,location) VALUES(203,'lwengo farmers market','lwengo');
 SELECT* FROM market
+
+CREATE VIEW 2b AS SELECT* FROM crop WHERE type='food crop'
+
+SELECT* FROM 2b
+
+CREATE TABLE transactionSales(
+    transactionID INT(10) PRIMARY KEY,
+    farmerCropID INT(10),
+    marketID INT(10),
+    date VARCHAR(255),
+    quantitySold INT(10),
+    unitPrice DECIMAL(10),
+    totalamount INT(20),
+    FOREIGN KEY(farmerCropID) REFERENCES farmer_crop(farmerCropID),
+    FOREIGN KEY(marketID) REFERENCES market(marketID)
+);
