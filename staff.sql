@@ -29,3 +29,6 @@ SELECT DISTINCT salary FROM staff;
 
 SELECT salary,age,gender FROM staff;
 
+CREATE VIEW salary_earned AS
+SELECT* FROM staff WHERE staffNo='SL21';
+SELECT* FROM salary_earned
