@@ -74,6 +74,8 @@ CREATE TABLE transactionSales(
 USE transactionSales;
 DESC transcationSales;
 
+ALTER TABLE transcationSales CHANGE date date VARCHAR(50);
+
 INSERT INTO transcationSales(transactionID,farmerCropID,marketID,date,quantitySold,unitPrice,totalamount) VALUES(301,1,201,'2024-01-15',500,3,1500);
 INSERT INTO transcationSales(transactionID,farmerCropID,marketID,date,quantitySold,unitPrice,totalamount) VALUES(302,2,202,'2024-02-10',300,2.5,750);
 INSERT INTO transcationSales(transactionID,farmerCropID,marketID,date,quantitySold,unitPrice,totalamount) VALUES(303,1,203,'2024-03-05',150,4,600);

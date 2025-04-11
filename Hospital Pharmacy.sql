@@ -137,7 +137,8 @@ SELECT * FROM view2b;
 
 -- part d
 CREATE VIEW view2c AS 
-SELECT SUM(Total_Amount_UGX) AS Total_Amount_Collected FROM Sales_Transaction;
+SELECT SUM(Total_Amount_UGX) AS Total_Amount_Collected 
+FROM Sales_Transaction;
 
 SELECT * FROM view2c;
 
@@ -153,7 +154,9 @@ SELECT * FROM view2d;
 
 -- part c
 
-CREATE VIEW viewleast AS SELECT Patient_ID, MIN(Dosage_mg) AS Smallest_Dosage FROM Prescription GROUP BY Patient_ID;
+CREATE VIEW viewleast AS 
+SELECT Patient_ID, MIN(Dosage_mg) AS Smallest_Dosage 
+FROM Prescription GROUP BY Patient_ID;
 SELECT * FROM viewleast;
 
 -- QUESTION 3
@@ -171,7 +174,8 @@ FROM Prescription;
 SELECT*FROM view3b;
 
 -- part c
-CREATE VIEW view3c AS SELECT * FROM Patient WHERE Name LIKE 'N%';
+CREATE VIEW view3c AS
+ SELECT * FROM Patient WHERE Name LIKE 'N%';
 SELECT * FROM view3c;
 
 -- part d
@@ -186,7 +190,8 @@ SELECT * FROM view3d;
 
 -- part e
 
-CREATE VIEW view3e AS SELECT * FROM Sales_Transaction WHERE Total_Amount_UGX > 50000;
+CREATE VIEW view3e AS
+ SELECT * FROM Sales_Transaction WHERE Total_Amount_UGX > 50000;
 SELECT * FROM view3e;
 -- part f
 
